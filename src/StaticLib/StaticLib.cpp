@@ -8,5 +8,17 @@
 
 bool is_leap_year(int year)
 {
-	return true;
+	//もし　4で割り切れる　かつ　100で割り切れない場合
+	if (year % 4 == 0 && year % 100 != 0)
+	{
+		return true;
+	}
+
+	//もし　400で割り切れる場合
+	if (year % 400 == 0)
+	{
+		return true;
+	}
+
+	return false;
 }
